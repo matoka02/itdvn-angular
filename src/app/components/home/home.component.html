@@ -1,0 +1,18 @@
+<h2>It`s Home Component</h2>
+
+<!-- интерполяция привязана к свойству -->
+<p>text from interpolation: {{interpolation}}</p>
+<p>text from interpolation: <span>{{interpolation}}</span></p>
+
+<!-- интерполяция привязана к классу CSS -->
+<button (click)='toggleColor()'>Change color</button>
+<p [class.blue]='isBlue'>text from interpolation: {{interpolation2}}</p>
+
+<!-- интерполяция привязана к стилям -->
+<p [style.color]="isBlue?'blue':'green'">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam iure
+  doloremque sint est reiciendis minima voluptas fuga laudantium error deserunt, nam quis asperiores suscipit dolores
+  dolorem sequi doloribus tempore iusto!</p>
+
+<!-- шаблонные переменные -->
+<p #userName>User Name</p>
+<p >{{userName.textContent}}</p>
