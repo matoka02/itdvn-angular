@@ -1,0 +1,16 @@
+<!-- <div>
+  <p>Counter Name: {{name}}</p>
+  <p>CounterValue: {{counterValue}}</p>
+</div>
+
+<button (click)="increment()">Increment Counter</button> -->
+
+<!-- рефакторинг с интерполяцией -->
+
+<div>
+  <p>Counter Name: {{name}}</p>
+  <p>CounterValue: {{counterValue}}</p>
+  <input type="text" (input)="onInputChange($event)">
+</div>
+
+<button (click)="increment()">Increment Counter</button>

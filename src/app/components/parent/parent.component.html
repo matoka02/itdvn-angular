@@ -1,0 +1,17 @@
+<!-- <p>parent works!</p>
+<app-child
+  name="Parent Counter Name"
+  [counterValue]="startCount"
+  [step]="parentStepValue"
+></app-child> -->
+
+<!-- рефакторинг с интерполяцией -->
+<p>{{parentName}}</p>
+<app-child
+  name="Parent Counter Name"
+  [counterValue]="startCount"
+  [step]="parentStepValue"
+  (inputChange)="handleInputChange($event)"
+  (counterChange)="handleChildCounterChange($event)"
+></app-child>
+<p>Parent Counter: {{parentCounter}}</p>
