@@ -48,5 +48,6 @@ export class ParentComponent {
   //   this.childList?.forEach(comp => comp.childColorChange())
   // };
 
-  
+  // переменные шаблона @ContentChild
+  // parentText = 'Parent text';
 }

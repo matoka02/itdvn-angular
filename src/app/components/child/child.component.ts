@@ -1,4 +1,5 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, ContentChild, ContentChildren, ElementRef, EventEmitter, Input, Output, QueryList } from '@angular/core';
+import { GrandChildComponent } from '../grand-child/grand-child.component';
 
 @Component({
   selector: 'app-child',
@@ -41,7 +42,16 @@ export class ChildComponent {
   //   this.isRed = !this.isRed
   // };
 
+  // переменные шаблона @ContentChild
+  // @ContentChild('elem') elem: ElementRef | undefined;
+  // changeText(){
+  //   if (this.elem) this.elem.nativeElement.innerHTML = 'Changed from Content Child';
+  // };
+
+  // переменные шаблона @ContentChildren
+  @ContentChildren(GrandChildComponent) grandChild: QueryList<GrandChildComponent> | undefined;
+  changeGrandChildColor() {
+    this.grandChild?.forEach(grandChild => grandChild.changeColor())
+  };
 }
 
-// 29-55
-// 33-40
