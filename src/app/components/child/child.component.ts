@@ -49,9 +49,9 @@ export class ChildComponent {
   // };
 
   // переменные шаблона @ContentChildren
-  @ContentChildren(GrandChildComponent) grandChild: QueryList<GrandChildComponent> | undefined;
-  changeGrandChildColor() {
-    this.grandChild?.forEach(grandChild => grandChild.changeColor())
-  };
+  // @ContentChildren(GrandChildComponent) grandChild: QueryList<GrandChildComponent> | undefined;
+  // changeGrandChildColor() {
+  //   this.grandChild?.forEach(grandChild => grandChild.changeColor())
+  // };
 }
 
