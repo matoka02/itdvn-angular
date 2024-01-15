@@ -1,7 +1,27 @@
+// div {
+//   color: #34558b;
+// }
+
+// button {
+//   color: #34558b;
+// }
+
+// .red {
+//   font-weight: bolder;
+//   color: #be3455;
+// }
+
+// переменные шаблона @ViewChildren
+
 div {
-  color: #be3455;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  border: 1px solid black;
 }
 
-button {
-  color: #be3455;
+.red {
+  background-color: #be3455;
 }
+
+

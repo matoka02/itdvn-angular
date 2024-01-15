@@ -14,19 +14,34 @@ export class ChildComponent {
   // };
 
   // рефакторинг с интерполяцией
-  @Input() name = 'Child Counter Name';
-  @Input('step') stepCounter = 3;
-  @Input() counterValue = 0;
-  increment() {
-    this.counterValue = this.counterValue + this.stepCounter;
-    this.counterChange.emit(this.counterValue);
-  };
-  @Output() inputChange = new EventEmitter<string>();
-  @Output() counterChange = new EventEmitter<number>();
+  // @Input() name = 'Child Counter Name';
+  // @Input('step') stepCounter = 3;
+  // @Input() counterValue = 0;
+  // increment() {
+  //   this.counterValue = this.counterValue + this.stepCounter;
+  //   this.counterChange.emit(this.counterValue);
+  // };
+  // @Output() inputChange = new EventEmitter<string>();
+  // @Output() counterChange = new EventEmitter<number>();
 
-  onInputChange(event: Event) {
-    // @ts-ignore
-    this.inputChange.emit(event.target.value)
-  };
+  // onInputChange(event: Event) {
+  //   // @ts-ignore
+  //   this.inputChange.emit(event.target.value)
+  // };
+
+  // переменные шаблона @ViewChild
+  // isRed = false;
+  // changeColor(){
+  //   this.isRed = !this.isRed
+  // };
+
+  // переменные шаблона @ViewChildren
+  // isRed = false;
+  // childColorChange(){
+  //   this.isRed = !this.isRed
+  // };
 
 }
+
+// 29-55
+// 33-40

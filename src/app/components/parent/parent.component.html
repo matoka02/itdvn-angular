@@ -6,7 +6,8 @@
 ></app-child> -->
 
 <!-- рефакторинг с интерполяцией -->
-<p>{{parentName}}</p>
+
+<!-- <p>{{parentName}}</p>
 <app-child
   name="Parent Counter Name"
   [counterValue]="startCount"
@@ -14,4 +15,40 @@
   (inputChange)="handleInputChange($event)"
   (counterChange)="handleChildCounterChange($event)"
 ></app-child>
-<p>Parent Counter: {{parentCounter}}</p>
+<p>Parent Counter: {{parentCounter}}</p> -->
+
+<!-- проекция контента -->
+
+<!-- <app-child>first</app-child>
+<app-child>second</app-child>
+<app-child>third</app-child>
+<app-child>fours</app-child> -->
+
+<!-- переменные шаблона @ViewChild -->
+
+<!-- <app-child #child></app-child>
+<div>
+  <button (click)="child.changeColor()">Change color in ParentComponent</button>
+</div>
+<div>
+  <button (click)="changeChildColor()">Change color by viewChild</button>
+</div>
+
+<input #parentInput type="text">
+<p>{{currentText}}</p>
+<div>
+  <button (click)="updateText()">Change text</button>
+  <button (click)="takeFocus()">Take me in focus</button>
+</div> -->
+
+<!-- переменные шаблона @ViewChildren -->
+
+<!-- <app-child #child></app-child>
+<app-child #child></app-child>
+<app-child></app-child>
+<app-child #child></app-child>
+<app-child></app-child>
+
+<div>
+  <button (click)="changeColor()">Change color in child</button>
+</div> -->
