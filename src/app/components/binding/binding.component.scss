@@ -4,3 +4,15 @@ form{
   width: 50%;
   margin: 0 auto;
 }
+
+input{
+  border: 1px solid #ddd;
+}
+
+.ng-invalid{
+  border-bottom: 2px solid #be3455;
+}
+
+.ng-valid{
+  border-bottom: 2px solid #88b04b;
+}

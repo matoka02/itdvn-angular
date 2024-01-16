@@ -20,7 +20,7 @@
     <input [formControlName]="'password'" id="pass" type="password">
     <pre>{{loginForm.get('password')?.errors | json}}</pre>
 
-    <details formGroupName="name">
+    <!-- <details formGroupName="name">
       <summary>Addition info</summary>
       <div>
         <input type="text" formControlName="firstName">
@@ -29,13 +29,32 @@
       <div>
         <input type="text" formControlName="lastName">
       </div>
-    </details>
+    </details> -->
 
-    <div>
+    <!-- <div>
       <label for="agree">Are you shure?</label>
       <input type="checkbox" formControlName="agree" id="agree">
       <pre>{{loginForm.get('agree')?.errors | json}}</pre>
+    </div> -->
+
+    <label *ngFor="let contact of getContacts.controls; index as i">
+      Enter phone number: {{i+1}}
+      <input [formControlName]="i" type="text">
+      <br><br>
+    </label>
+    <div *ngIf="isAuthorized">
+      <label for="subscribe">Subscribe
+        <input [formControlName]="'subscribe'" type="checkbox" id="subscribe">
+        {{loginForm.get('subscribe')?.errors | json}}
+      </label>
     </div>
+    <div>
+      <button (click)="addPhone()">Add phone</button>
+    </div>
+    <div>
+      <button (click)="clearPhones()">Clear phones</button>
+    </div>
+
 
     <input (click)="onSubmit()" type="submit" value="submit" [disabled]="loginForm.invalid">
     <p>{{loginForm.value | json}}</p>
