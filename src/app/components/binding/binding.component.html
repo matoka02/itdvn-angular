@@ -1,0 +1,43 @@
+<p>binding works!</p>
+
+<!-- двустороннее связывание -->
+
+<!-- <p>{{car.carName}}</p>
+<p>{{car.year}}</p>
+
+<input type="text" [(ngModel)]="car.carName">
+<input type="text" [(ngModel)]="car.year"> -->
+
+<!-- формы -->
+
+<form [formGroup]="loginForm">
+  <fieldset>
+    <legend>Login form</legend>
+    <label for="email">Email</label>
+    <input [formControlName]="'email'" id="email" type="email">
+    <pre>{{loginForm.get('email')?.errors | json}}</pre>
+    <label for="pass">Password</label>
+    <input [formControlName]="'password'" id="pass" type="password">
+    <pre>{{loginForm.get('password')?.errors | json}}</pre>
+
+    <details formGroupName="name">
+      <summary>Addition info</summary>
+      <div>
+        <input type="text" formControlName="firstName">
+      </div>
+      <br><hr>
+      <div>
+        <input type="text" formControlName="lastName">
+      </div>
+    </details>
+
+    <div>
+      <label for="agree">Are you shure?</label>
+      <input type="checkbox" formControlName="agree" id="agree">
+      <pre>{{loginForm.get('agree')?.errors | json}}</pre>
+    </div>
+
+    <input (click)="onSubmit()" type="submit" value="submit" [disabled]="loginForm.invalid">
+    <p>{{loginForm.value | json}}</p>
+  </fieldset>
+</form>
