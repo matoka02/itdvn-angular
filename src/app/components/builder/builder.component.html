@@ -1,0 +1,32 @@
+<p>builder works!</p>
+
+<form [formGroup]="form">
+  <div>
+    Login
+    <input type="text" formControlName="logins">
+    <p *ngIf="form.get('login')?.dirty">It`s required field</p>
+    {{form.get('login')?.errors | json}}
+  </div>
+  <div>
+    Email
+    <input type="email" formControlName="email">
+    <p *ngIf="form.get('email')?.touched | json">Please, focus on me</p>
+    <!-- {{form.get('email')?.errors | json}} -->
+    {{form.get('email')?.hasError('required') | json}}
+  </div>
+
+  <div>
+    Enter age
+    <input type="number" formControlName="age">
+    {{form.get('age')?.errors | json}}
+  </div>
+
+
+  <p>{{form.value | json}}</p>
+
+  <!-- <button (click)="setNewLogin()">Set login Alex</button> -->
+
+  <!-- <input [disabled]="isDisabled" (click)="handleSubmit()" type="submit" value="submit"> -->
+  <!-- <input [disabled]="form.invalid" (click)="handleSubmit()" type="submit" value="submit"> -->
+  <input [disabled]="!form.valid" (click)="handleSubmit()" type="submit" value="submit">
+</form>
