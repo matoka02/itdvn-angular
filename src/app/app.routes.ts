@@ -11,6 +11,7 @@ import { AuthComponent } from 'src/auth/components/auth/auth.component';
 import { OutdoorComponent } from './components/devices/outdoor/outdoor.component';
 import { IndoorComponent } from './components/devices/indoor/indoor.component';
 import { DeviceDetailsComponent } from './components/devices/device-details/device-details.component';
+import { AuthGuardGuard } from './auth-guard.guard';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -32,6 +33,6 @@ export const routes: Routes = [
       { path: 'indoor/:id', component: DeviceDetailsComponent },
     ]
   },
-  { path: 'languages', component: LanguagesComponent },
+  { path: 'languages', component: LanguagesComponent, canActivate: [AuthGuardGuard] },
   { path: '**', component: NotfoundComponent }
 ];
