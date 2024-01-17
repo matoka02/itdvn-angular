@@ -1,1 +1,17 @@
 <p>devices works!</p>
+
+<!-- <ul>
+  <li><a routerLink="outdoor">Outdoor</a></li>
+  <li><a routerLink="indoor">Indoor</a></li>
+</ul>
+<router-outlet></router-outlet> -->
+
+<h2>Indoor and Outdoor devices</h2>
+
+<div>
+  <button (click)="goToOutdoorDevices()">Go to outdoor devices</button>
+</div>
+<hr>
+<div>
+  <button *ngFor="let device of devices" (click)="showDeviceDetails(device)">Go to {{device.device}} details</button>
+</div>
