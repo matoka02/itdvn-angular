@@ -10,6 +10,7 @@ import { HomeComponent } from './components/home/home.component';
 import { NotfoundComponent } from './components/notfound/notfound.component';
 import { AudiComponent } from './components/audi/audi.component';
 import { OpelComponent } from './components/opel/opel.component';
+import { AuthModule } from 'src/auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -20,11 +21,12 @@ import { OpelComponent } from './components/opel/opel.component';
     HomeComponent,
     NotfoundComponent,
     AudiComponent,
-    OpelComponent
+    OpelComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    AuthModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
